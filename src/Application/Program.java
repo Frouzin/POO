@@ -23,8 +23,11 @@ public class Program {
         double p = (xA+xB+xC)/2.0;
         double areax = Math.sqrt(p*(p-xA)*(p-xB)*(p-xC));
 
-         p = (yA+yB+yC)/2.0;
+        p = (yA+yB+yC)/2.0;
         double areay = Math.sqrt(p*(p-yA)*(p-yB)*(p-yC));
+
+        System.out.printf("Triangle X area: %.4f%n", areax);
+        System.out.printf("Triangle Y area: %.4f%n", areay);
 
         scan.close();
     }
