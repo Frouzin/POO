@@ -35,6 +35,7 @@ public class Program {
         product.removeProducts(quantity);
         System.out.println("Update data: "+product);
 
+
         scan.close();
     }
 }
