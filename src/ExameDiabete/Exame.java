@@ -3,7 +3,7 @@ package ExameDiabete;
 public class Exame {
 	
 	
-	private int idExame;
+	private final int idExame;
 	private String nomePaciente;
 	private int nivelGlicose;
 	

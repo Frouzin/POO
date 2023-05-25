@@ -3,7 +3,7 @@ package ExameDiabete;
 import java.util.Scanner;
 public class AppExame {
 	
-	static Exame diag[] = new Exame[4];
+	static Exame[] diag = new Exame[4];
 	static Scanner scan = new Scanner(System.in);
 	static int contExame = 0;
 	
@@ -68,7 +68,7 @@ public class AppExame {
 			return;
 		}
 		
-		System.out.printf("\nCodigo Exame: ");
+		System.out.print("\nCodigo Exame: ");
 		int codigo = scan.nextInt();
 		
 		if (pesquisaExamePorId(codigo) != -1) {
@@ -77,9 +77,9 @@ public class AppExame {
 		}	
 		
 		scan.nextLine();
-		System.out.printf("Nome paciente: ");
+		System.out.print("Nome paciente: ");
 		String nomePaciente = scan.nextLine();
-		System.out.printf("Nivel glicose: ");
+		System.out.print("Nivel glicose: ");
 		int nivelGlicose = scan.nextInt();
 		
 		for (int i = 0; i < diag.length; i++) {
@@ -129,7 +129,7 @@ public class AppExame {
 			return;
 		}
 
-		System.out.printf("\nCodigo do ID: ");
+		System.out.print("\nCodigo do ID: ");
 		int codigo = scan.nextInt();
 		
 		int posicaoEncontrada = pesquisaExamePorId(codigo);
@@ -161,10 +161,9 @@ public class AppExame {
 		
 		System.out.println("\nNovo nome: ");
 		String novoNome = scan.next();
-		diag[posicaoEncontrada].setnomePaciente(novoNome);;
-		System.out.println("\n -Nivel da taxa de glicose alterado- \n");
-		return;
-	}
+		diag[posicaoEncontrada].setnomePaciente(novoNome);
+        System.out.println("\n -Nivel da taxa de glicose alterado- \n");
+    }
 	
 	else if (confirma == 'G'){
 		
@@ -173,8 +172,7 @@ public class AppExame {
 		diag[posicaoEncontrada].setNivelGlicose(novaGlicose);
 		System.out.println("\n -Nome alterado- \n");
 
-		return;
-	}
+    }
 	
 	else {
 		
@@ -186,8 +184,7 @@ public class AppExame {
 		diag[posicaoEncontrada].setnomePaciente(novoNome);
 		System.out.println("\n -Nivel da taxa de glicose alterado- \n");
 		System.out.println("\n -Nome alterado- \n");
-		return;
-	}
+    }
 }
 		
 	public static void excluiExame() {
@@ -199,7 +196,7 @@ public class AppExame {
 			return;
 		}
 		
-		System.out.printf("\nCodigo do ID: ");
+		System.out.print("\nCodigo do ID: ");
 		int codigo = scan.nextInt();
 		
 		int posicaoEncontrada = pesquisaExamePorId(codigo);
@@ -217,7 +214,7 @@ public class AppExame {
 		char confirma;
 		do {
 			
-			System.out.printf("\nConfirma exclusão (S/N): ");
+			System.out.print("\nConfirma exclusão (S/N): ");
 			scan.nextLine();
 			confirma = scan.nextLine().charAt(0);
 			confirma = Character.toUpperCase(confirma);
@@ -243,8 +240,7 @@ public class AppExame {
 		else{
 			
 			System.out.println("\n -Diagnóstico Excluido- \n");
-			return;
-		}
+        }
 	}
 
 	public static void listaExames() {

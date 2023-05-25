@@ -2,9 +2,9 @@ package ViagemATT;
 
 public class Veiculo {
 	
-	private int idVeiculo;
+	private final int idVeiculo;
 
-	private String placa;
+	private final String placa;
 	private char status;
 	private int kmOdometro;
 	

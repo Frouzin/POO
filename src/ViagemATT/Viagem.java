@@ -3,8 +3,8 @@ import java.util.Date;
 
 public class Viagem {
 
-	private int idViagem;
-	private String destino;
+	private final int idViagem;
+	private final String destino;
 	private Date dataInicial;
 	private Date dataFinal;
 	private int kmPercorrido;

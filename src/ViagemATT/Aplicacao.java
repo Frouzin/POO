@@ -29,7 +29,7 @@ public class Aplicacao {
 			System.out.printf("Kilometragem do carro: %d",veiculo.getKmOdometro());
 			System.out.printf("Status do veiculo: %s ",veiculo.getStatus());
 			
-			System.out.printf("INICIO DA VIAGEM");
+			System.out.print("INICIO DA VIAGEM");
 			System.out.println(viagem.iniciarViagem(veiculo));
 			data1=new Date();
 			System.out.printf("ID da viagem: %d", viagem.getIdViagem());
@@ -40,8 +40,8 @@ public class Aplicacao {
 			System.out.printf("Status do carro: %s ",veiculo.getStatus());
 
 			
-			System.out.printf("FINAL DA VIAGEM");
-			System.out.printf("O final da viagem esta para ser registrada");
+			System.out.print("FINAL DA VIAGEM");
+			System.out.print("O final da viagem esta para ser registrada");
 			viagem.finalizarViagem(10000);
 			veiculo.registrarRetorno(50000);
 			System.out.println("O Final de viagem foi registrada");
